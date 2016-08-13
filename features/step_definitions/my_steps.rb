@@ -96,7 +96,7 @@ Then(/^debe mostrar un boton que permita "([^"]*)"$/) do |button|
   click_button(button)
 end
 
-Given(/^ingresamos a la página resultado con "([^"]*)"$/) do |text|
+Given(/^ingresamos a la pagina resultado con "([^"]*)"$/) do |text|
   visit "/resultado?resultado=#{text}"
 end
 
