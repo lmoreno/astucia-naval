@@ -20,3 +20,7 @@ Scenario:
 Scenario:
         Given ingresamos al tablero y hacemos clic en la coordenada "A1"
         Then debe mostrar un boton que lea "comenzar"
+
+Scenario:
+        Given ingresamos al tablero
+        Then debe mostrar un boton que permita "regresar"

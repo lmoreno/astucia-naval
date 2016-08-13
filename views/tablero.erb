@@ -33,8 +33,12 @@
         <td id="C3" <%= session["coordenada_barco"]=="C3"?"data-barco":"" %>><a href="/tablero?posicionar=C3">C3</a></td>
       </tr>
     </table>
-    <form class="" action="/atacar" method="post">
-      <input type="submit" id="comenzar" name="comenzar" value="Comenzar">
+    <form class="" action="/" method="post">
+
+    </form>
+    <form class="" method="get">
+      <input type="submit" id="comenzar" name="comenzar" value="Comenzar" formaction="/atacar">
+      <input type="submit" id="regresar" name="regresar" value="Volver al inicio" formaction="/">
     </form>
   </body>
 </html>

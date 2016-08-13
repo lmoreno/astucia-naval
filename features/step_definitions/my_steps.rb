@@ -91,3 +91,7 @@ Then(/^debo ver la casilla "(.*?)" de color "(.*?)"$/) do |coordenada, color|
     td_color.should contain "#{color}"
   end
 end
+
+Then(/^debe mostrar un boton que permita "([^"]*)"$/) do |button|
+  click_button(button)
+end
