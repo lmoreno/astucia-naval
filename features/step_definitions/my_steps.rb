@@ -103,3 +103,7 @@ end
 Then(/^debo poder ver la imagen "([^"]*)"$/) do |image|
   last_response.body.should =~ /#{image}/m
 end
+
+Then(/^debo ver la pagina de resultado$/) do
+
+end
