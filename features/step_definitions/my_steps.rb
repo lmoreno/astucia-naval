@@ -21,3 +21,11 @@ Then(/^debo ver un tablero de tres por tres$/) do
   last_response.should have_xpath( "//td[@id=\"C2\"]")
   last_response.should have_xpath( "//td[@id=\"C3\"]")
 end
+
+When(/^hago click en boton "(.*?)"$/) do |name|
+  click_button(name)
+end
+
+Then(/^debo ver pantalla de tablero$/) do
+  
+end
