@@ -14,5 +14,5 @@ Feature:
 
   Scenario: quiero ir a la pagina del tablero
     Given que abri la aplicacion
-    When hago click en boton "Play"
+    When hago click en boton "Posicionar barco"
     Then debo ver un tablero de tres por tres
