@@ -68,10 +68,6 @@ Given(/^estoy en la pagina de atacar$/) do
   visit "/atacar"
 end
 
-Then(/^debo ver la casilla en posicion "(.*?)" de color "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
 Given(/^ingresamos al tablero y hacemos clic en la coordenada "([^"]*)"$/) do |coordenada|
   visit '/tablero'
   click_link(coordenada)
@@ -81,5 +77,8 @@ Then(/^el barco debe verse posicionado en la coordenada "([^"]*)"$/) do |id|
   last_response.should have_xpath( "//td[@data-barco]/@id") do |thid|
     thid == id
   end
+end
 
+Then(/^debe mostrar un boton que lea "([^"]*)"$/) do |button|
+  click_button(button)
 end

@@ -17,21 +17,24 @@
       <tr>
         <th id="A">A</th>
         <td id="A1" <%= session["coordenada_barco"]=="A1"?"data-barco":"" %>><a href="/tablero?posicionar=A1">A1</a></td>
-        <td id="A2" <%= session["coordenada_barco"]=="A1"?"data-barco":"" %>><a href="/tablero?posicionar=A2">A2</a></td>
-        <td id="A3" <%= session["coordenada_barco"]=="A1"?"data-barco":"" %>><a href="/tablero?posicionar=A3">A3</a></td>
+        <td id="A2" <%= session["coordenada_barco"]=="A2"?"data-barco":"" %>><a href="/tablero?posicionar=A2">A2</a></td>
+        <td id="A3" <%= session["coordenada_barco"]=="A3"?"data-barco":"" %>><a href="/tablero?posicionar=A3">A3</a></td>
       </tr>
       <tr>
         <th id="B">B</th>
-        <td id="B1"><a href="/tablero?posicionar=B1">B1</a></td>
-        <td id="B2"><a href="/tablero?posicionar=B2">B2</a></td>
-        <td id="B3"><a href="/tablero?posicionar=B3">B3</a></td>
+        <td id="B1" <%= session["coordenada_barco"]=="B1"?"data-barco":"" %>><a href="/tablero?posicionar=B1">B1</a></td>
+        <td id="B2" <%= session["coordenada_barco"]=="B2"?"data-barco":"" %>><a href="/tablero?posicionar=B2">B2</a></td>
+        <td id="B3" <%= session["coordenada_barco"]=="B3"?"data-barco":"" %>><a href="/tablero?posicionar=B3">B3</a></td>
       </tr>
       <tr>
         <th id="C">C</th>
-        <td id="C1"><a href="/tablero?posicionar=C1">C1</a></td>
-        <td id="C2"><a href="/tablero?posicionar=C2">C2</a></td>
-        <td id="C3"><a href="/tablero?posicionar=C3">C3</a></td>
+        <td id="C1" <%= session["coordenada_barco"]=="C1"?"data-barco":"" %>><a href="/tablero?posicionar=C1">C1</a></td>
+        <td id="C2" <%= session["coordenada_barco"]=="C2"?"data-barco":"" %>><a href="/tablero?posicionar=C2">C2</a></td>
+        <td id="C3" <%= session["coordenada_barco"]=="C3"?"data-barco":"" %>><a href="/tablero?posicionar=C3">C3</a></td>
       </tr>
     </table>
+    <form class="" action="/atacar" method="post">
+      <input type="submit" id="comenzar" name="comenzar" value="Comenzar">
+    </form>
   </body>
 </html>
