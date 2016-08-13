@@ -62,3 +62,11 @@ end
 Then(/^debo poder dar click en la coordenada "([^"]*)" para posicionar el barco$/) do |coordenada|
   click_link(coordenada)
 end
+
+Given(/^estoy en la pagina de atacar$/) do
+  visit "/atacar"
+end
+
+Then(/^debo ver la casilla en posicion "(.*?)" de color "(.*?)"$/) do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end

@@ -7,3 +7,7 @@ end
 get '/tablero' do
   erb :tablero
 end
+
+get '/atacar' do
+  erb :atacar
+end
