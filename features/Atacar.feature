@@ -8,3 +8,7 @@ Feature: Como jugador
   Scenario: Accedo a la pagina de atacar
     Given estoy en la pagina de atacar
     Then debo ver un tablero de tres por tres
+
+  Scenario: Me indica que estoy en mi turno de atacar
+    Given estoy en la pagina de atacar
+    Then debo poder ver el mensaje "Es tu turno! Haz click en donde deseas atacar"
