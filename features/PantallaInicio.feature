@@ -11,3 +11,8 @@ Feature:
   Scenario: quiero ver el nombre de la aplicacion
     Given que abri la aplicacion
     Then debo ver "Astucia Naval"
+
+  Scenario: quiero ir a la pagina del tablero
+    Given que abri la aplicacion
+    When hago click en boton "Play"
+    Then debo ver pantalla de tablero
