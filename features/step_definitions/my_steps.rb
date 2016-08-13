@@ -63,7 +63,6 @@ Then(/^debo poder dar click en la coordenada "([^"]*)" para posicionar el barco$
   click_link(coordenada)
 end
 
-
 Given(/^estoy en la pagina de atacar$/) do
   visit "/atacar"
 end
@@ -82,4 +81,14 @@ Then(/^el barco debe verse posicionado en la coordenada "([^"]*)"$/) do |id|
     thid == id
   end
 
+end
+
+When(/^hago click en casilla "(.*?)"$/) do |coordenada|
+  click_link(coordenada)
+end
+
+Then(/^debo ver la casilla "(.*?)" de color "(.*?)"$/) do |coordenada, color|
+  last_response.should have_xpath( "//td[@id=\"#{coordenada}\"]/@data-color") do |td_color|
+    td_color.should contain "#{color}"
+  end
 end
