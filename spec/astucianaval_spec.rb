@@ -6,8 +6,8 @@ describe AstuciaNaval do
 		@juego = AstuciaNaval.new
 	end
 
-	describe "Posicionamiento"
-		it "debe poder permitir definit la coordenada de posicionamiento del barco" do
+	describe "Posicionamiento" do
+		it "debe poder permitir  definit la coordenada de posicionamiento del barco" do
 			@juego.posicionar "A1"
 			@juego.posicion.should == "A1"
 		end
