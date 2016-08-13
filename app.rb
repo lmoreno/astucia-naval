@@ -1,5 +1,6 @@
 require 'sinatra'
 
 get '/' do
-  "Bienvenido"  
+  "Bienvenido \n Astucia Naval"
+
 end

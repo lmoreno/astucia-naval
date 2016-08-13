@@ -7,3 +7,7 @@ Feature:
   Scenario: quiero ver un titulo de bienvenida
     Given que abri la aplicacion
     Then debo ver "Bienvenido"
+
+  Scenario: quiero ver el nombre de la aplicacion
+    Given que abri la aplicacion
+    Then debo ver "Astucia Naval"
