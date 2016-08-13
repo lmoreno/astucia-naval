@@ -27,5 +27,26 @@ When(/^hago click en boton "(.*?)"$/) do |name|
 end
 
 Then(/^debo ver pantalla de tablero$/) do
-  
+
+end
+
+Then(/^debo ver las coordenadas del tablero$/) do
+  last_response.should have_xpath( "//th[@id=\"A\"]") do |th|
+    th.should contain( 'A' )
+  end
+  last_response.should have_xpath( "//th[@id=\"B\"]") do |th|
+    th.should contain( 'B' )
+  end
+  last_response.should have_xpath( "//th[@id=\"C\"]") do |th|
+    th.should contain( 'C' )
+  end
+  last_response.should have_xpath( "//th[@id=\"1\"]") do |th|
+    th.should contain( '1' )
+  end
+  last_response.should have_xpath( "//th[@id=\"2\"]") do |th|
+    th.should contain( '2' )
+  end
+  last_response.should have_xpath( "//th[@id=\"3\"]") do |th|
+    th.should contain( '3' )
+  end
 end

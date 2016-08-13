@@ -7,3 +7,7 @@ Feature: As jugador
 Scenario:
     Given ingresamos al juego
     Then debo ver un tablero de tres por tres
+
+    Scenario:
+        Given ingresamos al juego
+        Then debo ver las coordenadas del tablero
