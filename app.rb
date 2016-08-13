@@ -1,6 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  "Bienvenido \n Astucia Naval"
-
+  erb :home
 end
