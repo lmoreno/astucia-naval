@@ -15,4 +15,4 @@ Feature:
   Scenario: quiero ir a la pagina del tablero
     Given que abri la aplicacion
     When hago click en boton "Play"
-    Then debo ver pantalla de tablero
+    Then debo ver un tablero de tres por tres
