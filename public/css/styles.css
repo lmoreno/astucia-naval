@@ -40,3 +40,12 @@ form, input[name=comenzar]{
   text-align: center;
   font-size: 16px;
 }
+
+.logo{
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.container{
+  text-align: center;
+}
