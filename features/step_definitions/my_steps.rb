@@ -95,3 +95,7 @@ end
 Then(/^debe mostrar un boton que permita "([^"]*)"$/) do |button|
   click_button(button)
 end
+
+Then(/^debo ver la pagina de resultado$/) do
+  pending # express the regexp above with the code you wish you had
+end

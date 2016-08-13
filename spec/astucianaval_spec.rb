@@ -12,4 +12,13 @@ describe AstuciaNaval do
 			@juego.posicion.should == "A1"
 		end
 	end
+
+	describe "Atacar" do
+		it "debo saber si una coordenada ha sido impactada" do
+			resultado = @juego.atacar_casilla "B2"
+			resultado.should == false
+
+		end
+	end
+
 end

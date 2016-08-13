@@ -15,5 +15,5 @@ Feature: Como jugador
 
   Scenario: Hago un ataque exitoso
     Given estoy en la pagina de atacar
-    When hago click en casilla "B2"
-    Then debo ver la casilla "B2" de color "#00ff00"
+    When hago click en casilla "C3"
+    Then debo ver la pagina de resultado

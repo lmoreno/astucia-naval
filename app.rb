@@ -16,5 +16,12 @@ get '/tablero' do
 end
 
 get '/atacar' do
-  erb :atacar
+  coordenada = params["coordenada"]
+  if coordenada == nil
+    erb :atacar
+  else
+    juego = AstuciaNaval.new
+    session['resultado'] = juego.atacar_casilla coordenada
+    erb :resultado
+  end
 end
