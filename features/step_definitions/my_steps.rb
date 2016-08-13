@@ -50,3 +50,15 @@ Then(/^debo ver las coordenadas del tablero$/) do
     th.should contain( '3' )
   end
 end
+
+Given(/^ingresamos al tablero$/) do
+  visit '/tablero'
+end
+
+Then(/^debo poder ver el mensaje "([^"]*)"$/) do |text|
+  last_response.body.should =~ /#{text}/m
+end
+
+Then(/^debo poder dar click en la coordenada "([^"]*)" para posicionar el barco$/) do |coordenada|
+  click_link(coordenada)
+end
