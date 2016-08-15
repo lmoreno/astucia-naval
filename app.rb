@@ -20,9 +20,7 @@ get '/atacar' do
   if coordenada == nil
     erb :atacar
   else
-    puts "Atacar coordenada #{coordenada}"
     impacto = session['juego'].realizar_ataque coordenada
-    puts "Impacto: #{impacto}"
     redirect("/resultado?impacto=#{impacto}")
   end
 end
