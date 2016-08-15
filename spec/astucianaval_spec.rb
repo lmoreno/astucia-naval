@@ -14,10 +14,18 @@ describe AstuciaNaval do
 	end
 
 	describe "Atacar" do
-		it "debo saber si una coordenada ha sido impactada" do
-			resultado = @juego.atacar_casilla "B2"
-			resultado.should == false
+		it "debo saber cuando se impacta la posición del barco" do
+			@juego.posicionar "A1"
+			resultado = @juego.realizar_ataque "A1"
 
+			resultado.should == true
+		end
+
+		it "debo saber cuando se impacta una posición sin barco" do
+			@juego.posicionar "A1"
+			resultado = @juego.realizar_ataque "B2"
+
+			resultado.should == false
 		end
 	end
 

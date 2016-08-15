@@ -67,6 +67,14 @@ input[type=button]:hover, input[type=submit]:hover{
   border-radius: 10px;
 }
 
+.logo.lose{
+  max-width: 600px;
+}
+
+.logo.win{
+  max-height: 400px;
+}
+
 .container{
   text-align: center;
 }

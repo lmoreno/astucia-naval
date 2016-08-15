@@ -12,8 +12,3 @@ Feature: Como jugador
   Scenario: Me indica que estoy en mi turno de atacar
     Given estoy en la pagina de atacar
     Then debo poder ver el mensaje "Es tu turno! Haz click en donde deseas atacar"
-
-  Scenario: Hago un ataque exitoso
-    Given estoy en la pagina de atacar
-    When hago click en casilla "C3"
-    Then debo ver la pagina de resultado

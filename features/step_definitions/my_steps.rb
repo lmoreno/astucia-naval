@@ -96,14 +96,10 @@ Then(/^debe mostrar un boton que permita "([^"]*)"$/) do |button|
   click_button(button)
 end
 
-Given(/^ingresamos a la pagina resultado con "([^"]*)"$/) do |text|
-  visit "/resultado?resultado=#{text}"
+Given(/^ingresamos a la página resultado con "([^"]*)"$/) do |text|
+  visit "/resultado?impacto=#{text}"
 end
 
 Then(/^debo poder ver la imagen "([^"]*)"$/) do |image|
   last_response.body.should =~ /#{image}/m
-end
-
-Then(/^debo ver la pagina de resultado$/) do
-
 end

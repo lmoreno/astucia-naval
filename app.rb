@@ -20,17 +20,13 @@ get '/atacar' do
   if coordenada == nil
     erb :atacar
   else
-    juego = AstuciaNaval.new
-    session['resultado'] = juego.atacar_casilla coordenada
-    erb :resultado
+    puts "Atacar coordenada #{coordenada}"
+    impacto = session['juego'].realizar_ataque coordenada
+    puts "Impacto: #{impacto}"
+    redirect("/resultado?impacto=#{impacto}")
   end
 end
 
 get '/resultado' do
-  if session['resultado'] == "win"
-    session['result_image'] = "http://ci.memecdn.com/11/9827011.jpg"
-  else
-    session['result_image'] = "http://3.bp.blogspot.com/-lse4doyKXDg/T3m3j-D71dI/AAAAAAAAALA/FOSZygcq1fY/s1600/Ryu-Bison+Lose.jpg"
-  end
   erb :resultado
 end
