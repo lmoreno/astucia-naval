@@ -7,15 +7,15 @@
   </head>
   <body>
     <div class="container">
-    <h1>Tu resultado</h1>
-    <% if params['impacto'] == "true" %>
-      <img class="logo win" src="http://ci.memecdn.com/11/9827011.jpg" alt="logo">
-    <% else %>
-      <img class="logo lose" src="http://3.bp.blogspot.com/-lse4doyKXDg/T3m3j-D71dI/AAAAAAAAALA/FOSZygcq1fY/s1600/Ryu-Bison+Lose.jpg" alt="logo">
-    <% end %>
-    <form class="" action="/" method="get">
-      <input type="submit" name="regresar" value="Volver a comenzar">
-    </form>
-  </div>
+      <h1>Tu resultado</h1>
+      <% if impacto %>
+        <img class="logo win" src="http://ci.memecdn.com/11/9827011.jpg" alt="logo">
+      <% else %>
+        <img class="logo lose" src="http://3.bp.blogspot.com/-lse4doyKXDg/T3m3j-D71dI/AAAAAAAAALA/FOSZygcq1fY/s1600/Ryu-Bison+Lose.jpg" alt="logo">
+      <% end %>
+      <div class="buttonBar">
+        <a class="button" href="/">Volver al inicio</a>
+      </div>
+    </div>
   </body>
 </html>

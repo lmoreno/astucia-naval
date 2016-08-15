@@ -23,7 +23,7 @@ Then(/^debo ver un tablero de tres por tres$/) do
 end
 
 When(/^hago click en boton "(.*?)"$/) do |name|
-  click_button(name)
+  click_link(name)
 end
 
 Then(/^debo ver pantalla de tablero$/) do
@@ -79,7 +79,7 @@ Then(/^el barco debe verse posicionado en la coordenada "([^"]*)"$/) do |id|
 end
 
 Then(/^debe mostrar un boton que lea "([^"]*)"$/) do |button|
-  click_button(button)
+  click_link(button)
 end
 
 When(/^hago click en casilla "(.*?)"$/) do |coordenada|
@@ -93,13 +93,15 @@ Then(/^debo ver la casilla "(.*?)" de color "(.*?)"$/) do |coordenada, color|
 end
 
 Then(/^debe mostrar un boton que permita "([^"]*)"$/) do |button|
-  click_button(button)
+  click_link(button)
 end
 
-Given(/^ingresamos a la página resultado con "([^"]*)"$/) do |text|
-  visit "/resultado?impacto=#{text}"
+Given(/^posicionamos barco en "([^"]*)" y atacamos "([^"]*)"$/) do |posicion, ataque|
+  visit "/posicionar/#{posicion}"
+  visit "/atacar/#{ataque}"
+  get "/resultado"
 end
 
-Then(/^debo poder ver la imagen "([^"]*)"$/) do |image|
+Then(/^en la página resultado debo encontrar la imagen "([^"]*)"$/) do |image|
   last_response.body.should =~ /#{image}/m
 end

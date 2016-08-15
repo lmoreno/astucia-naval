@@ -12,6 +12,8 @@ th {
 
 html, body {
   width: 100%
+  margin: 0;
+  padding: 0;
 }
 
 h1{
@@ -35,12 +37,12 @@ td a{
   background-color: purple;
 }
 
-form{
+form, .buttonBar{
   margin-top: 20px;
   text-align: center;
 }
 
-input[type=button], input[type=submit]{
+input[type=button], input[type=submit], .button{
 border:1px solid #d7dada; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold;
  color: black;
  background-color: #f4f5f5; background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f5f5), to(#dfdddd));
@@ -52,7 +54,7 @@ border:1px solid #d7dada; -webkit-border-radius: 3px; -moz-border-radius: 3px;bo
  cursor: pointer;
 }
 
-input[type=button]:hover, input[type=submit]:hover{
+input[type=button]:hover, input[type=submit]:hover, .button:hover{
  border:1px solid #bfc4c4;
  background-color: #d9dddd; background-image: -webkit-gradient(linear, left top, left bottom, from(#d9dddd), to(#c6c3c3));
  background-image: -webkit-linear-gradient(top, #d9dddd, #c6c3c3);

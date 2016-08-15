@@ -4,27 +4,35 @@ require './lib/astucianaval'
 enable :sessions
 
 get '/' do
+  session.delete 'juego'
+  session.delete 'coordenada_barco'
   erb :home
 end
 
 get '/tablero' do
-  juego = AstuciaNaval.new
-  juego.posicionar params['posicionar']
-  session['juego'] = juego
-  session['coordenada_barco'] = params['posicionar']
+  session.delete 'juego'
+  session.delete 'coordenada_barco'
   erb :tablero
 end
 
-get '/atacar' do
-  coordenada = params["coordenada"]
+get '/posicionar/?:coordenada' do
+  juego = AstuciaNaval.new
+  juego.posicionar params[:coordenada]
+  session['juego'] = juego
+  session['coordenada_barco'] = juego.posicion
+  erb :tablero
+end
+
+get '/atacar/?:coordenada?' do
+  coordenada = params[:coordenada]
   if coordenada == nil
     erb :atacar
   else
-    impacto = session['juego'].realizar_ataque coordenada
-    redirect("/resultado?impacto=#{impacto}")
+    session['juego'].realizar_ataque coordenada
+    redirect '/resultado'
   end
 end
 
 get '/resultado' do
-  erb :resultado
+  erb :resultado, :locals => {:impacto => session['juego'].impacto}
 end
